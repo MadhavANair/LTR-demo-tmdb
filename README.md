@@ -1,6 +1,6 @@
 # LTR DEMO in opensearch
 ## Setup is as same as hello-ltr repo 
-The overall goal of this project is to demonstrate all the steps required to work with LTR in Elasticsearch, Solr, or OpenSearch. There are two modes of running this project. You can run and edit notebooks in a docker container or you can do local development on the notebooks and connect to the search engine(s) running in Docker.
+The overall goal of this project is to demonstrate all the steps required to work with LTR in OpenSearch. There are two modes of running this project. You can run and edit notebooks in a docker container or you can do local development on the notebooks and connect to the search engine(s) running in Docker.
 
 ## No fuss setup: You just want to play with LTR
 
@@ -9,7 +9,7 @@ Follow these steps if you're just playing around & are OK with possibly losing s
 With docker simply run
 
 ```
-docker compose up
+docker compose up (-d) if you want to detached
 ```
 
 at the root dir and go to town!
