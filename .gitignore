@@ -1,17 +1,105 @@
+# ============================================================================
+# Git Configuration for hello-ltr - OpenSearch TMDB Focus Only
+# ============================================================================
+
+# Data directories - ignore by default EXCEPT OpenSearch TMDB
 data/
-**/data
+**/data/
+
+# BUT allow OpenSearch TMDB data (required for scripts to run)
+!notebooks/opensearch/tmdb/data/
+!notebooks/opensearch/tmdb/data/**
+
+# Python environments and virtual envs
 venv/*
+ltr3/*
+tests_venv/*
+notebooks/opensearch/ltr3/*
+notebooks/*/ltr3/*
+
+# Jupyter and IDE
 **/.ipynb_checkpoints
 tests/last_run.ipynb
-
-*.pyc
 .vscode
-.cache
-features.txt
-.trash
-.DS_store
-notify.sh
-
 .idea/
 *.iml
-tests_venv/*
+
+# Python cache and temporary files
+*.pyc
+.cache
+.trash
+.DS_store
+**/__pycache__/
+
+# Shell scripts
+notify.sh
+
+# Temporary/sandbox directories
+.claw/
+.sandbox-home/
+.sandbox-tmp/
+**/.sandbox-home/
+**/.sandbox-tmp/
+**/.claw/
+
+# ============================================================================
+# IGNORE ALL NOTEBOOKS EXCEPT OPENSEARCH
+# ============================================================================
+
+# Ignore root notebooks
+notebooks/click*
+notebooks/conversion*
+notebooks/ltr.py
+
+# Ignore Elasticsearch (completely separate from OpenSearch)
+notebooks/elasticsearch/
+notebooks/elasticsearch/**
+
+# Ignore exercises (can be recreated)
+notebooks/exercises/
+notebooks/exercises/**
+
+# Ignore Solr (not needed)
+notebooks/solr/
+notebooks/solr/**
+
+# ============================================================================
+# IGNORE OPTIONAL DIRECTORIES
+# ============================================================================
+
+# Tests (optional)
+tests/
+tests/**
+
+# Utilities (optional)
+utils/
+utils/**
+
+# RRE - Relevance Results Engine (not needed)
+rre/
+rre/**
+
+# Docker directory (optional)
+docker/
+docker/**
+
+# ============================================================================
+# WHAT IS TRACKED (via git ls-files)
+# ============================================================================
+# Core files:
+#  - .gitignore, .dockerignore, Dockerfile
+#  - docker-compose.yml, README.md
+#  - requirements.txt, LICENSE
+#
+# Core Library:
+#  - ltr/ (all modules and helpers)
+#
+# OpenSearch Content Only:
+#  - notebooks/opensearch/ (docker-compose, README, configs)
+#  - notebooks/opensearch/.docker/ (Dockerfile configs)
+#  - notebooks/opensearch/tmdb/ (all notebooks)
+#  - notebooks/opensearch/tmdb/data/ (TMDB dataset + models)
+#  - notebooks/opensearch/osc-blog/ (blog examples)
+# ============================================================================
+# Ignore the massive TMDB dataset file
+notebooks/opensearch/tmdb/data/tmdb.json

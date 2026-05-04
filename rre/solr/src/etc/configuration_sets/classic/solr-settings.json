@@ -1,4 +1,0 @@
-{
-  "baseUrls": [ "http://host.docker.internal:8983/solr" ],
-  "collectionName": "tmdb"
-}
