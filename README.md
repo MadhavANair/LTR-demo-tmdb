@@ -12,16 +12,7 @@ The repository includes:
   - Other learning notebooks and examples
 - ✅ **Docker Configuration**: `notebooks/opensearch/docker-compose.yml`
 - ✅ **Dependencies**: `requirements.txt` with all packages
-
-## What's NOT Included (Can Be Deleted)
-
-The following directories can be safely deleted and recreated:
-- `notebooks/elasticsearch/` - Elasticsearch examples
-- `notebooks/exercises/` - Practice exercises
-- `tests/` - Test suite
-- `utils/` - Utility scripts
-- `rre/` - RRE (Relevant Results Engine) config
-
+- 
 ## Initial Setup
 
 ### 1. Clone the Repository
